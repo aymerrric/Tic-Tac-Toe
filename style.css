@@ -1,0 +1,154 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root{
+    --grid-color: red;
+    --grid-size: 4px;
+    --grid-style: solid;
+  }
+
+  html, body{
+    height: 100vh;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #grid{
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 60vh;
+    align-items: stretch;
+  }
+
+  .line{
+    display: flex;
+    flex:1 1 auto;
+  }
+  .case{
+    flex: 1;
+  }
+
+  #case1{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style) ;
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+  }
+
+  #case2{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style) ;
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+
+  }
+
+  #case3{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style);
+  } 
+
+
+  #case4{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style) ;
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+  }
+  #case5{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style) ;
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+  }
+
+  #case6{
+    border-bottom: var(--grid-color) var(--grid-size) var(--grid-style) ;
+  }
+
+  #case7{
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+  }
+
+  #case8{
+    border-right: var(--grid-color) var(--grid-size) var(--grid-style);
+  }
+
+  dialog[open]{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65vh;
+    height: 65vh;
+
+  }
+
+  form{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .name-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  button{
+    grid-column: 1/-1;
+  }
+
+  #turn{
+    display: hidden;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    text-align: center;
+  }
