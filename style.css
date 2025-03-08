@@ -24,6 +24,7 @@
   /* 6. Inherit fonts for form controls */
   input, button, textarea, select {
     font: inherit;
+    text-align: center;
   }
   
   /* 7. Avoid text overflows */
@@ -54,6 +55,9 @@
 
   html, body{
     height: 100vh;
+    background: url(images/background_image.png);
+    background-repeat:no-repeat;
+    background-size: cover;
   }
 
   body{
@@ -71,11 +75,14 @@
   }
 
   .line{
-    display: flex;
-    flex:1 1 auto;
+    flex:1 1 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .case{
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
   }
 
   #case1{
@@ -122,6 +129,7 @@
     transform: translate(-50%, -50%);
     width: 65vh;
     height: 65vh;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 
   }
 
@@ -143,6 +151,12 @@
   }
   button{
     grid-column: 1/-1;
+    width: 200px;
+    height: auto;
+    justify-self: center;
+    background-color: rgb(55, 209, 55);
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 
   #turn{
@@ -151,4 +165,13 @@
     left: 50%;
     top: 0;
     text-align: center;
+    transform: translate(-50%,0);
+    margin-top: 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  label{
+    font-size: 1.5rem;
+    font-weight: bold;
   }
